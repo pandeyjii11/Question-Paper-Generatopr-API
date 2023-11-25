@@ -80,13 +80,13 @@ To generate a question paper, make a POST request to /generate-paper with the fo
 
 1. Add a New Question:
 
-The /add-question endpoint allows the addition of a new question with specified attributes (question, subject, topic, difficulty, marks).
+The /addQuestion endpoint allows the addition of a new question with specified attributes (question, subject, topic, difficulty, marks).
 The application validates the request payload, ensuring all required fields are present.
 If successful, the new question is created and returned in the response.
 
 2. Generate Question Paper:
 
-The /generate-paper endpoint generates a question paper based on specified criteria (total marks and difficulty distribution).
+The /generateQuestionPaper endpoint generates a question paper based on specified criteria (total marks and difficulty distribution).
 The total marks are divided among different difficulty levels (easy, medium, hard) according to the specified distribution.
 The application retrieves questions from the Question Store for each difficulty level and randomly selects questions until the allocated marks are reached.
 The generated question paper is returned in the response.
@@ -135,4 +135,4 @@ npm run dev
 ```
 
 ### Test the Endpoints
-Use tools like curl or Postman to test the /add-question and /generate-paper endpoints.
+Use tools like curl or Postman to test the /addQuestion and /generateQuestionPaper endpoints.
